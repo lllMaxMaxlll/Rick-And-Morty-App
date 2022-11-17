@@ -5,6 +5,7 @@ export default function Cards(props) {
 	const { characters } = props;
 	const cards = characters.map((elem) => (
 		<Card
+			key={elem.name}
 			name={elem.name}
 			species={elem.species}
 			gender={elem.gender}

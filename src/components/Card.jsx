@@ -1,6 +1,7 @@
 import styles from "./Card.module.css";
 
 export default function Card({ name, species, gender, image, onClose }) {
+	onClose = () => window.alert("Emulamos que se cierra la card");
 	return (
 		<div className={styles.card}>
 			<div className={styles.cardImg}>

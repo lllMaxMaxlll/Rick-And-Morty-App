@@ -1,0 +1,18 @@
+.App {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background: url(../public/assets/wall2.png);
+	background-size: 100% 100%;
+}
+
+.logo {
+	margin-top: 1rem;
+	min-width: 400px;
+	height: 130px;
+	background: url(../public/assets/logo.png);
+	background-size: 100% 100%;
+}
