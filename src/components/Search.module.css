@@ -1,4 +1,5 @@
 .input {
+	font: inherit;
 	margin: 1.5rem;
 	width: 15rem;
 	height: 2rem;
@@ -13,8 +14,10 @@
 }
 
 .button {
-	padding: 0.5rem 1rem;
-	font-weight: 300;
+	font: inherit;
+	text-align: center;
+	padding: 0.3rem 1.2rem;
+	font-weight: 400;
 	text-transform: uppercase;
 	color: #000;
 	background-color: #f1faee;
@@ -23,9 +26,12 @@
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
-	outline: none;
 }
-
+.button > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .button:hover {
 	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
 }
