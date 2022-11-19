@@ -1,13 +1,8 @@
 .cards {
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 1rem;
-}
-
-@media screen and (max-width: 1200px) {
-	.cards {
-		flex-wrap: wrap;
-	}
 }

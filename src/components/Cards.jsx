@@ -5,12 +5,13 @@ export default function Cards(props) {
 	const { characters, onClose } = props;
 	const cards = characters.map((elem) => (
 		<Card
-			key={elem.name}
+			key={elem.id}
 			name={elem.name}
 			species={elem.species}
 			gender={elem.gender}
 			image={elem.image}
 			onClose={onClose}
+			id={elem.id}
 		/>
 	));
 	return <div className={styles.cards}>{cards}</div>;

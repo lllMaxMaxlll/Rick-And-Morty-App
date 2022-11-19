@@ -2,7 +2,6 @@ import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav";
 import { useState } from "react";
-import characters2 from "./data";
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -11,16 +10,23 @@ function App() {
 		fetch(`https://rickandmortyapi.com/api/character/${character}`)
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data.name);
-				if (data.name) {
-					setCharacters((oldChars) => [...oldChars, data]);
+				if (data.id) {
+					if (!characters.some((char) => char.id === data.id)) {
+						setCharacters((oldChars) => [...oldChars, data]);
+					} else {
+						window.alert("Ya agregaste a ese personaje!");
+					}
 				} else {
 					window.alert("No hay personajes con ese ID");
 				}
 			});
 	};
 
-	const onClose = () => window.alert("Emulamos que se cierra la card");
+	const onClose = (id) => {
+		setCharacters((characters) =>
+			characters.filter((char) => char.id !== id)
+		);
+	};
 
 	return (
 		<div className='App'>

@@ -1,7 +1,7 @@
 import styles from "./Card.module.css";
 import { GrClose } from "react-icons/gr";
 
-export default function Card({ name, species, gender, image, onClose }) {
+export default function Card({ id, name, species, gender, image, onClose }) {
 	return (
 		<div className={styles.card}>
 			<div className={styles.cardImg}>
@@ -12,7 +12,7 @@ export default function Card({ name, species, gender, image, onClose }) {
 				<h2 className={styles.subtitle}>{species}</h2>
 				<h2 className={styles.subtitle}>{gender}</h2>
 			</div>
-			<button className={styles.button} onClick={onClose}>
+			<button className={styles.button} onClick={() => onClose(id)}>
 				<GrClose />
 			</button>
 		</div>
