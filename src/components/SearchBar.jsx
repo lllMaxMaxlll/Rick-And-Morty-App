@@ -9,6 +9,8 @@ export default function SearchBar(props) {
 		setText({ ...text, text: event.target.value });
 	};
 
+	const random = Math.floor(Math.random() * 826);
+
 	return (
 		<div>
 			<input
@@ -21,6 +23,11 @@ export default function SearchBar(props) {
 				className={styles.button}
 				onClick={() => props.onSearch(text.text)}>
 				Agregar
+			</button>
+			<button
+				className={styles.button}
+				onClick={() => props.onSearch(random)}>
+				Random
 			</button>
 		</div>
 	);
