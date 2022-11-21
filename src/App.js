@@ -11,10 +11,11 @@ function App() {
 			.then((response) => response.json())
 			.then((data) => {
 				if (data.id) {
-					if (!characters.some((char) => char.id === data.id)) {
-						setCharacters((oldChars) => [...oldChars, data]);
-					} else {
+					console.log(data);
+					if (characters.some((char) => char.id === data.id)) {
 						window.alert("Ya agregaste a ese personaje!");
+					} else {
+						setCharacters((oldChars) => [...oldChars, data]);
 					}
 				} else {
 					window.alert("No hay personajes con ese ID");
