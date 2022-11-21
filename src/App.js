@@ -11,7 +11,6 @@ function App() {
 			.then((response) => response.json())
 			.then((data) => {
 				if (data.id) {
-					console.log(data);
 					if (characters.some((char) => char.id === data.id)) {
 						window.alert("Ya agregaste a ese personaje!");
 					} else {
