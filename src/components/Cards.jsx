@@ -12,6 +12,7 @@ export default function Cards(props) {
 			image={elem.image}
 			onClose={onClose}
 			id={elem.id}
+			status={elem.status}
 		/>
 	));
 	return <div className={styles.cards}>{cards}</div>;
