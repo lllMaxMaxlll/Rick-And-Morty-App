@@ -1,6 +1,7 @@
 .card {
+	position: relative;
 	width: 250px;
-	height: 300px;
+	height: 290px;
 	margin: 1rem;
 	box-shadow: 0px 2px 5px rgba(35, 35, 35, 0.3);
 	transition: all 0.3s ease-in-out;
@@ -10,17 +11,17 @@
 	background-color: #f1faee;
 }
 
-.cardImg > img {
-	position: relative;
-	top: -30px;
+.cardImg {
+	position: absolute;
+	top: 0px;
 	width: 100%;
 }
 
 .cardInfo {
-	background-color: #f1faee;
-	position: relative;
-	top: -27px;
+	position: absolute;
 	width: 100%;
+	background-color: #f1faee;
+	bottom: -43px;
 	text-align: center;
 }
 
@@ -46,9 +47,9 @@
 }
 
 .button {
-	position: relative;
+	position: absolute;
 	top: -50px;
-	left: 13.2rem;
+	right: 0.4rem;
 	padding: 0.5rem;
 	background-color: #f1faee;
 	border: none;
