@@ -1,14 +1,10 @@
 .App {
-	width: 100vw;
-	height: 100vh;
+	/* width: 100vw;
+	height: 100vh; */
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	background: url(../public/assets/wall2.png);
-	background-position: 50%;
-	background-attachment: fixed;
-	background-size: cover;
 }
 
 .logo {
