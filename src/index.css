@@ -6,7 +6,7 @@ body {
 	font-family: "Titillium Web", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: url(../public/assets/wall2.png);
+	background: url(./assets/wall.png);
 	background-position: 50%;
 	background-attachment: fixed;
 	background-size: cover;

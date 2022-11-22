@@ -1,6 +1,4 @@
 .App {
-	/* width: 100vw;
-	height: 100vh; */
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -8,11 +6,9 @@
 }
 
 .logo {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	min-width: 450px;
 	height: 120px;
-	background: url(../public/assets/logo.png);
-	background-size: 100% 100%;
 }
 
 @media (max-width: 500px) {

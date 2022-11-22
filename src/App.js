@@ -2,8 +2,9 @@ import "./App.css";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav";
 import { useState } from "react";
+import Logo from "./assets/logo.png";
 
-function App() {
+const App = () => {
 	const [characters, setCharacters] = useState([]);
 
 	const onSearch = (character) => {
@@ -30,11 +31,11 @@ function App() {
 
 	return (
 		<div className='App'>
-			<div className='logo'></div>
+			<img src={Logo} alt='logo' className='logo' />
 			<Nav onSearch={onSearch} />
 			<Cards characters={characters} onClose={onClose} />
 		</div>
 	);
-}
+};
 
 export default App;
