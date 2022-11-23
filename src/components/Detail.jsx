@@ -3,7 +3,15 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = (props) => {
-	const [character, setCharacter] = useState({});
+	const [character, setCharacter] = useState({
+		name: "",
+		status: "",
+		species: "",
+		gender: "",
+		origin: {},
+		location: {},
+		image: "",
+	});
 	const { id } = useParams();
 	const navigate = useNavigate();
 
@@ -11,8 +19,6 @@ const Detail = (props) => {
 		fetch(`https://rickandmortyapi.com/api/character/${id}`)
 			.then((response) => response.json())
 			.then((char) => {
-				console.log(char.location.name);
-				console.log(char.origin.name);
 				if (char.name) {
 					setCharacter(char);
 				} else {
@@ -22,6 +28,15 @@ const Detail = (props) => {
 			.catch((err) => {
 				window.alert("No hay personajes con ese ID");
 			});
+		return setCharacter({
+			name: "",
+			status: "",
+			species: "",
+			gender: "",
+			origin: {},
+			location: {},
+			image: "",
+		});
 	}, [id]);
 
 	const backToHome = () => {
@@ -47,12 +62,16 @@ const Detail = (props) => {
 							<span>{character.gender}</span>
 							<h2>Specie:</h2>
 							<span>{character.species}</span>
+							<h2>Origin:</h2>
+							<span>{character.origin.name}</span>
 						</div>
 						<div className={style.subtitle1}>
 							<h2>Status:</h2>
 							<span>{character.status}</span>
 							<h2>Type:</h2>
 							<span>{character.type ? character.type : "Uknown"}</span>
+							<h2>Location:</h2>
+							<span>{character.location.name}</span>
 						</div>
 					</div>
 				</div>
