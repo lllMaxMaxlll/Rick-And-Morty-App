@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Search.module.css";
+import styles from "./css-modules/Search.module.css";
 import { useState } from "react";
 
 export default function SearchBar(props) {

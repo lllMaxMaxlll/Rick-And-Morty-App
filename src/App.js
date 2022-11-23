@@ -1,8 +1,11 @@
 import "./App.css";
+import Logo from "./assets/logo.png";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav";
+import About from "./components/About";
+import Detail from "./components/Detail";
 import { useState } from "react";
-import Logo from "./assets/logo.png";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
 	const [characters, setCharacters] = useState([]);
@@ -31,9 +34,15 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			<img src={Logo} alt='logo' className='logo' />
 			<Nav onSearch={onSearch} />
-			<Cards characters={characters} onClose={onClose} />
+			<Routes>
+				<Route
+					path='/home'
+					element={<Cards characters={characters} onClose={onClose} />}
+				/>
+				<Route path='/detail/:detailId' element={<Detail />} />
+				<Route path='/about' element={<About />} />
+			</Routes>
 		</div>
 	);
 };
