@@ -5,6 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 100;
 }
 
 .logo {
@@ -14,31 +15,11 @@
 }
 
 .logo:hover {
-	transform: scale(1.05);
+	transform: scale(1.02);
 	transition: all 0.3s ease 0s;
 }
 
-.about {
-	font: inherit;
-	text-align: center;
-	padding: 0.3rem 1.2rem;
-	margin: 0.1rem 0.5rem;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: #000;
-	background-color: #f1faee;
-	border: none;
-	border-radius: 45px;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease 0s;
-	cursor: pointer;
-}
-
-.about:hover {
-	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
-}
-
-@media (max-width: 500px) {
+@media (max-width: 650px) {
 	.logo {
 		min-width: 300px;
 		height: 100px;

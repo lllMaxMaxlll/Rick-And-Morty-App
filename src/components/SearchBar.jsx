@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./css-modules/Search.module.css";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function SearchBar(props) {
 	const [text, setText] = useState("");
@@ -29,6 +30,9 @@ export default function SearchBar(props) {
 				onClick={() => props.onSearch(random)}>
 				Random
 			</button>
+			<NavLink to={"/about"}>
+				<button className={styles.about}>About</button>
+			</NavLink>
 		</div>
 	);
 }

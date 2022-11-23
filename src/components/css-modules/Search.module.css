@@ -34,11 +34,32 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.about {
+	font: inherit;
+	text-align: center;
+	padding: 0.3rem 1.2rem;
+	margin: 0.1rem 0.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #000;
+	background-color: #f1faee;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+
+.about:hover {
+	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
+}
+
 .button:hover {
 	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 	.input {
 		display: block;
 		margin: 1rem auto;
@@ -46,5 +67,9 @@
 	.button {
 		display: block;
 		margin: 0.5rem auto;
+	}
+	.about {
+		display: block;
+		margin: 0 auto;
 	}
 }

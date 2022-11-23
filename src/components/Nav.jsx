@@ -11,9 +11,6 @@ const Nav = (props) => {
 				<img src={Logo} alt='logo' className={styles.logo} />
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
-			<NavLink to={"/about"} className={styles.about}>
-				<span>About</span>
-			</NavLink>
 		</nav>
 	);
 };
