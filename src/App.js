@@ -1,9 +1,9 @@
 import "./App.css";
-import Logo from "./assets/logo.png";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav";
 import About from "./components/About";
 import Detail from "./components/Detail";
+import PageNotFound from "./components/PageNotFound";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -40,8 +40,9 @@ const App = () => {
 					path='/home'
 					element={<Cards characters={characters} onClose={onClose} />}
 				/>
-				<Route path='/detail/:detailId' element={<Detail />} />
+				<Route path='/detail/:id' element={<Detail />} />
 				<Route path='/about' element={<About />} />
+				<Route path='*' element={<PageNotFound />} />
 			</Routes>
 		</div>
 	);

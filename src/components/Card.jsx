@@ -7,7 +7,7 @@ const Card = ({ id, name, species, gender, image, onClose }) => {
 		<div className={styles.card}>
 			<img className={styles.cardImg} src={image} alt={name} />
 			<div className={styles.cardInfo}>
-				<NavLink id={id} to={`/detail/${id}`}>
+				<NavLink to={`/detail/${id}`}>
 					<h2 className={styles.title}>{name}</h2>
 				</NavLink>
 				<div className={styles.subtitle}>

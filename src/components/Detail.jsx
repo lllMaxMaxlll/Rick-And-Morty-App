@@ -4,11 +4,11 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = (props) => {
 	const [character, setCharacter] = useState({});
-	const { detailId } = useParams();
+	const { id } = useParams();
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+		fetch(`https://rickandmortyapi.com/api/character/${id}`)
 			.then((response) => response.json())
 			.then((char) => {
 				if (char.name) {
@@ -20,10 +20,7 @@ const Detail = (props) => {
 			.catch((err) => {
 				window.alert("No hay personajes con ese ID");
 			});
-		return setCharacter({});
-	}, [detailId]);
-
-	console.log(character);
+	}, [id]);
 
 	const backToHome = () => {
 		navigate("/home");

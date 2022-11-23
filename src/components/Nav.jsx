@@ -7,12 +7,11 @@ import { NavLink } from "react-router-dom";
 const Nav = (props) => {
 	return (
 		<nav className={styles.nav}>
-			<img src={Logo} alt='logo' className='logo' />
-			<SearchBar onSearch={props.onSearch} />
-			<NavLink to={"/home"}>
-				<span>Home</span>
+			<NavLink to={"/home"} className={styles.home}>
+				<img src={Logo} alt='logo' className={styles.logo} />
 			</NavLink>
-			<NavLink to={"/about"}>
+			<SearchBar onSearch={props.onSearch} />
+			<NavLink to={"/about"} className={styles.about}>
 				<span>About</span>
 			</NavLink>
 		</nav>
