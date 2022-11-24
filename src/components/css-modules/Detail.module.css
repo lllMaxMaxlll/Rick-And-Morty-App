@@ -1,9 +1,10 @@
 .detail {
 	display: flex;
+	justify-items: stretch;
 	margin: 1rem;
 	background-color: #f1faee;
 	height: 300px;
-	width: 600px;
+	width: 700px;
 	box-shadow: 0px 5px 15px rgba(35, 35, 35, 0.3);
 	border: solid #f1faee 5px;
 	border-radius: 10px;
@@ -12,25 +13,33 @@
 
 .cardInfo {
 	width: 100%;
-	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.cardInfo > * {
+.cardInfo > h1 {
 	text-align: center;
-	margin: 10px 5px;
+	margin: 0 auto;
 }
 
 .cardInfo .subtitle {
-	display: flex;
-	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 }
 
 .subtitle > * {
 	margin: 0 auto;
+	margin-bottom: 10px;
 }
 
 .subtitle1 > * {
-	margin: 2px auto;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .detail .image {
