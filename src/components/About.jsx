@@ -1,5 +1,6 @@
 import style from "./css-modules/About.module.css";
 import { useNavigate } from "react-router-dom";
+import FotoPerfil from "../assets/perfil.png";
 
 const About = () => {
 	const navigate = useNavigate();
@@ -10,7 +11,7 @@ const About = () => {
 	return (
 		<>
 			<div className={style.detail}>
-				<img src='' alt='foto-perfil' className={style.image} />
+				<img src={FotoPerfil} alt='foto-perfil' className={style.image} />
 				<div className={style.cardInfo}>
 					<h1>Maximiliano Matias Herr</h1>
 					<div className={style.subtitle}>
@@ -26,9 +27,9 @@ const About = () => {
 							<h2>Status:</h2>
 							<span>Alive</span>
 							<h2>Type:</h2>
-							<span>Uknown</span>
+							<span>Developer</span>
 							<h2>Location:</h2>
-							<span>Unknown</span>
+							<span>Behind your screen</span>
 						</div>
 					</div>
 				</div>

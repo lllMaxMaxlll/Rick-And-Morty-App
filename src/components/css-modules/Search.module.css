@@ -33,16 +33,11 @@
 }
 
 @media (max-width: 650px) {
+	.searchbar {
+		display: flex;
+		align-items: center;
+	}
 	.input {
-		display: block;
-		margin: 1rem auto;
-	}
-	.button {
-		display: block;
-		margin: 0.5rem auto;
-	}
-	.about {
-		display: block;
-		margin: 0 auto;
+		width: 8rem;
 	}
 }

@@ -11,7 +11,11 @@ const Nav = (props) => {
 				{logo}
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
-			<NavLink to={"/about"} activeClassName={styles.active}>
+			<NavLink
+				to={"/about"}
+				className={(navData) =>
+					navData.isActive ? styles.active : "none"
+				}>
 				<button className={styles.about}>About</button>
 			</NavLink>
 		</nav>

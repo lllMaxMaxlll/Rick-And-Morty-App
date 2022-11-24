@@ -13,7 +13,7 @@ export default function SearchBar(props) {
 	const random = Math.floor(Math.random() * 826);
 
 	return (
-		<div>
+		<div className={styles.searchbar}>
 			<input
 				type='search'
 				placeholder='Agregar'

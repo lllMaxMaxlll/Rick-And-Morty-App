@@ -1,6 +1,5 @@
 .nav {
 	width: 100vw;
-	height: 70px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -8,7 +7,7 @@
 }
 
 .nav > * {
-	margin: 0 2rem;
+	margin: 5px 1.5rem;
 }
 
 .about {
@@ -42,6 +41,16 @@
 	transition: all 0.3s ease-in-out;
 }
 
-.active {
-	background-color: black;
+.active > button {
+	background-color: transparent;
+	color: #f1faee;
+	font-weight: 700;
+	border: #f1faee 2px solid;
+	cursor: default;
+}
+
+@media (max-width: 550px) {
+	.nav {
+		flex-direction: column;
+	}
 }

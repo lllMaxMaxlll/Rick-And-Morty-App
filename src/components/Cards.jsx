@@ -1,3 +1,4 @@
+import { useNavigate, useParams } from "react-router-dom";
 import Card from "./Card";
 import styles from "./css-modules/Cards.module.css";
 
