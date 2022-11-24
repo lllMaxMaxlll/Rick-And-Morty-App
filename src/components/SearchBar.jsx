@@ -1,19 +1,24 @@
 import React from "react";
 import styles from "./css-modules/Search.module.css";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
-export default function SearchBar(props) {
+const SearchBar = (props) => {
 	const [text, setText] = useState("");
 
 	const handleChange = (event) => {
 		setText({ ...text, text: event.target.value });
 	};
 
+	let location = useLocation();
+
 	const random = Math.floor(Math.random() * 826);
 
 	return (
-		<div className={styles.searchbar}>
+		<div
+			className={
+				location.pathname === "/home" ? styles.searchbar : styles.hidden
+			}>
 			<input
 				type='search'
 				placeholder='Agregar'
@@ -32,4 +37,6 @@ export default function SearchBar(props) {
 			</button>
 		</div>
 	);
-}
+};
+
+export default SearchBar;
