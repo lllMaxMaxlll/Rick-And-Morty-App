@@ -4,3 +4,16 @@
 	justify-content: flex-start;
 	align-items: center;
 }
+
+.logo {
+	margin-top: 0.2rem;
+	min-width: 450px;
+	height: 120px;
+}
+
+@media (max-width: 650px) {
+	.logo {
+		min-width: 300px;
+		height: 100px;
+	}
+}

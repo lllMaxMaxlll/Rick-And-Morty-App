@@ -30,9 +30,6 @@ export default function SearchBar(props) {
 				onClick={() => props.onSearch(random)}>
 				Random
 			</button>
-			<NavLink to={"/about"}>
-				<button className={styles.about}>About</button>
-			</NavLink>
 		</div>
 	);
 }

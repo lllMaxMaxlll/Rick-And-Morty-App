@@ -6,6 +6,7 @@ import Detail from "./components/Detail";
 import PageNotFound from "./components/PageNotFound";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import Logo from "./assets/logo.png";
 
 const App = () => {
 	const [characters, setCharacters] = useState([]);
@@ -35,6 +36,7 @@ const App = () => {
 	return (
 		<div className='App'>
 			<Nav onSearch={onSearch} />
+			<img src={Logo} alt='imagen' className='logo' />
 			<Routes>
 				<Route
 					path='/home'

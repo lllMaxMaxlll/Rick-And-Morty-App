@@ -12,6 +12,7 @@ const Detail = (props) => {
 		location: {},
 		image: "",
 	});
+
 	const { id } = useParams();
 	const navigate = useNavigate();
 

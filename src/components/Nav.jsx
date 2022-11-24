@@ -1,16 +1,19 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import styles from "./css-modules/Nav.module.css";
-import Logo from "../assets/logo.png";
+import logo from "./Logo";
 import { NavLink } from "react-router-dom";
 
 const Nav = (props) => {
 	return (
 		<nav className={styles.nav}>
-			<NavLink to={"/home"} className={styles.home}>
-				<img src={Logo} alt='logo' className={styles.logo} />
+			<NavLink to={"/home"} className={styles.svglogo}>
+				{logo}
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
+			<NavLink to={"/about"} activeClassName={styles.active}>
+				<button className={styles.about}>About</button>
+			</NavLink>
 		</nav>
 	);
 };
