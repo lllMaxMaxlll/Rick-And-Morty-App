@@ -39,7 +39,8 @@ const App = () => {
 			<img src={Logo} alt='imagen' className='logo' />
 			<Routes>
 				<Route
-					path='/home'
+					exact
+					path='/'
 					element={<Cards characters={characters} onClose={onClose} />}
 				/>
 				<Route path='/detail/:id' element={<Detail />} />

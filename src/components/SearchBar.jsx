@@ -17,11 +17,11 @@ const SearchBar = (props) => {
 	return (
 		<div
 			className={
-				location.pathname === "/home" ? styles.searchbar : styles.hidden
+				location.pathname === "/" ? styles.searchbar : styles.hidden
 			}>
 			<input
 				type='search'
-				placeholder='Agregar'
+				placeholder='Agregar con número ID'
 				className={styles.input}
 				onChange={handleChange}
 			/>
