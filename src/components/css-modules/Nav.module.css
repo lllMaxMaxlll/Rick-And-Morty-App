@@ -36,8 +36,8 @@
 }
 
 .svglogo:hover {
-	transform: translateY(10px);
-	filter: drop-shadow(-3px -10px 2px rgb(0 0 0 / 0.4));
+	fill: #1d1d1d;
+	filter: drop-shadow(-4px -2px 2px rgb(0 0 0 / 0.4));
 	transition: all 0.3s ease-in-out;
 }
 
