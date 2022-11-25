@@ -23,27 +23,38 @@ const Form = (props) => {
 		);
 	};
 
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		props.login(userData);
+	};
+
 	return (
-		<div className={style.form}>
-			<label>Username:</label>
-			<input
-				type='text'
-				key='username'
-				name='username'
-				value={userData.username}
-				placeholder='Username'
-				onChange={handleInputChange}
-			/>
-			<label>Password:</label>
-			<input
-				type='text'
-				key='password'
-				name='password'
-				value={userData.password}
-				placeholder='Password'
-				onChange={handleInputChange}
-			/>
-			<button type='submit'>Login</button>
+		<div>
+			<form className={style.form} onSubmit={handleSubmit}>
+				<label>Username:</label>
+				<input
+					type='text'
+					key='username'
+					name='username'
+					value={userData.username}
+					placeholder='Username'
+					onChange={handleInputChange}
+				/>
+				<span>{errors.username}</span>
+
+				<label>Password:</label>
+				<input
+					type='password'
+					key='password'
+					name='password'
+					value={userData.password}
+					placeholder='Password'
+					onChange={handleInputChange}
+				/>
+				<span>{errors.password}</span>
+
+				<button type='submit'>Login</button>
+			</form>
 		</div>
 	);
 };

@@ -20,6 +20,9 @@ const Nav = (props) => {
 					About
 				</button>
 			</NavLink>
+			<button onClick={() => props.logout()} className={styles.about}>
+				Logout
+			</button>
 		</nav>
 	);
 };

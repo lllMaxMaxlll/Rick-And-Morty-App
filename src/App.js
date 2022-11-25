@@ -5,12 +5,29 @@ import About from "./components/About";
 import Detail from "./components/Detail";
 import PageNotFound from "./components/PageNotFound";
 import Form from "./components/Form";
+import { useEffect } from "react";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Logo from "./assets/logo.png";
 
 const App = () => {
 	const [characters, setCharacters] = useState([]);
+	const [access, setAccess] = useState(false);
+	const username = "max.herr.88@gmail.com";
+	const password = "maxi1234";
+	const navigate = useNavigate();
+
+	const login = (userData) => {
+		if (username === userData.username && password === userData.password) {
+			setAccess(true);
+			navigate("/home");
+		}
+	};
+
+	const logout = () => {
+		setAccess(false);
+		navigate("/");
+	};
 
 	const onSearch = (character) => {
 		fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -34,12 +51,18 @@ const App = () => {
 		);
 	};
 
+	/* eslint-disable */
+	useEffect(() => {
+		!access && navigate("/");
+	}, [access]);
+	/* eslint-disable */
+
 	return (
 		<div className='App'>
-			<Nav onSearch={onSearch} />
+			<Nav onSearch={onSearch} logout={logout} />
 			<img src={Logo} alt='imagen' className='logo' />
 			<Routes>
-				<Route exact path='/' element={<Form />} />
+				<Route exact path='/' element={<Form login={login} />} />
 				<Route
 					path='/home'
 					element={<Cards characters={characters} onClose={onClose} />}
