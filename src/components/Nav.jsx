@@ -12,17 +12,21 @@ const Nav = (props) => {
 				{logo}
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
-			<NavLink to={"/about"}>
-				<button
-					className={
-						location.pathname === "/about" ? styles.active : styles.about
-					}>
-					About
+			<div>
+				<NavLink to={"/about"}>
+					<button
+						className={
+							location.pathname === "/about"
+								? styles.active
+								: styles.about
+						}>
+						About
+					</button>
+				</NavLink>
+				<button onClick={() => props.logout()} className={styles.about}>
+					Logout
 				</button>
-			</NavLink>
-			<button onClick={() => props.logout()} className={styles.about}>
-				Logout
-			</button>
+			</div>
 		</nav>
 	);
 };

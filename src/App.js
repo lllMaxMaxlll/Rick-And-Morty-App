@@ -66,7 +66,11 @@ const App = () => {
 	return (
 		<div className='App'>
 			<Nav onSearch={onSearch} logout={logout} />
-			<img src={Logo} alt='imagen' className='logo' />
+			<img
+				src={Logo}
+				alt='imagen'
+				className={useLocation().pathname === "/" ? "logoLogin" : "logo"}
+			/>
 			<Routes>
 				<Route exact path='/' element={<Form login={login} />} />
 				<Route

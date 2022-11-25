@@ -55,7 +55,13 @@ const Form = (props) => {
 				/>
 				<span className={style.spanerror}>{errors.password}</span>
 
-				<button type='submit' className={style.button}>
+				<button
+					type='submit'
+					className={
+						!Object.values(errors).length
+							? style.button
+							: style.buttonDisabled
+					}>
 					Login
 				</button>
 			</form>
