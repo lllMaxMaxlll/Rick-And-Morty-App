@@ -17,7 +17,7 @@ const SearchBar = (props) => {
 	return (
 		<div
 			className={
-				location.pathname === "/" ? styles.searchbar : styles.hidden
+				location.pathname === "/home" ? styles.searchbar : styles.hidden
 			}>
 			<input
 				type='search'

@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import Detail from "./components/Detail";
 import PageNotFound from "./components/PageNotFound";
+import Form from "./components/Form";
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Logo from "./assets/logo.png";
@@ -38,9 +39,9 @@ const App = () => {
 			<Nav onSearch={onSearch} />
 			<img src={Logo} alt='imagen' className='logo' />
 			<Routes>
+				<Route exact path='/' element={<Form />} />
 				<Route
-					exact
-					path='/'
+					path='/home'
 					element={<Cards characters={characters} onClose={onClose} />}
 				/>
 				<Route path='/detail/:id' element={<Detail />} />

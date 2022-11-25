@@ -41,7 +41,7 @@ const Detail = (props) => {
 	}, [id]);
 
 	const backToHome = () => {
-		navigate("/");
+		navigate("/home");
 	};
 
 	return (

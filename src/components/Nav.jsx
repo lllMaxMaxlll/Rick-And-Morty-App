@@ -7,8 +7,8 @@ import { NavLink, useLocation } from "react-router-dom";
 const Nav = (props) => {
 	const location = useLocation();
 	return (
-		<nav className={styles.nav}>
-			<NavLink to={"/"} className={styles.svglogo}>
+		<nav className={location.pathname === "/" ? styles.hidden : styles.nav}>
+			<NavLink to={"/home"} className={styles.svglogo}>
 				{logo}
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
