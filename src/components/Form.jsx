@@ -42,7 +42,9 @@ const Form = (props) => {
 					placeholder='Username'
 					onChange={handleInputChange}
 				/>
-				<span className={style.spanerror}>{errors.username}</span>
+				<span className={`${style.errormail} ${style.error}`}>
+					{errors.username}
+				</span>
 
 				<label>Password:</label>
 				<input
@@ -53,7 +55,9 @@ const Form = (props) => {
 					placeholder='Password'
 					onChange={handleInputChange}
 				/>
-				<span className={style.spanerror}>{errors.password}</span>
+				<span className={`${style.errorpass} ${style.error}`}>
+					{errors.password}
+				</span>
 
 				<button
 					type='submit'
