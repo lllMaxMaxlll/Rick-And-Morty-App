@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./css-modules/Form.module.css";
 import validate from "./validation";
+import portal from "../assets/portal3.png";
 
 const Form = (props) => {
 	const [userData, setUserData] = useState({
@@ -29,7 +30,8 @@ const Form = (props) => {
 	};
 
 	return (
-		<div>
+		<div className={style.container}>
+			<img src={portal} alt='portal' />
 			<form className={style.form} onSubmit={handleSubmit}>
 				<label>Username:</label>
 				<input
@@ -40,7 +42,7 @@ const Form = (props) => {
 					placeholder='Username'
 					onChange={handleInputChange}
 				/>
-				<span>{errors.username}</span>
+				<span className={style.spanerror}>{errors.username}</span>
 
 				<label>Password:</label>
 				<input
@@ -51,9 +53,11 @@ const Form = (props) => {
 					placeholder='Password'
 					onChange={handleInputChange}
 				/>
-				<span>{errors.password}</span>
+				<span className={style.spanerror}>{errors.password}</span>
 
-				<button type='submit'>Login</button>
+				<button type='submit' className={style.button}>
+					Login
+				</button>
 			</form>
 		</div>
 	);

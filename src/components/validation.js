@@ -9,7 +9,7 @@ const validate = (inputs) => {
 
 	if (!regexPassword.test(inputs.password)) {
 		errors.password =
-			"La contraseña de tener entre 6 y 10 caracteres y debe incluir un número";
+			"Debe tener entre 6 y 10 caracteres e incluir un número";
 	}
 	return errors;
 };

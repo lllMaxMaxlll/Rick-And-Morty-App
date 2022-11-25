@@ -7,15 +7,21 @@ import PageNotFound from "./components/PageNotFound";
 import Form from "./components/Form";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Logo from "./assets/logo.png";
 
 const App = () => {
 	const [characters, setCharacters] = useState([]);
 	const [access, setAccess] = useState(false);
-	const username = "max.herr.88@gmail.com";
+	const username = "max@mail.com";
 	const password = "maxi1234";
 	const navigate = useNavigate();
+
+	if (useLocation().pathname === "/") {
+		document.body.classList.add("bodyBlack");
+	} else {
+		document.body.classList.remove("bodyBlack");
+	}
 
 	const login = (userData) => {
 		if (username === userData.username && password === userData.password) {
