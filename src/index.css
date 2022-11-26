@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
 body {
-	width: 100vw;
-	height: 100vh;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Titillium Web", sans-serif;
@@ -13,7 +11,7 @@ body {
 	background: url(./assets/wall.png);
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: center top;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
