@@ -6,19 +6,19 @@
 }
 
 .logo {
-	margin: 0.2rem;
-	min-width: 450px;
-	height: 120px;
+	width: 450px;
 }
 
 .logoLogin {
 	margin: 0.2rem;
-	min-width: 450px;
-	height: 120px;
+	width: 450px;
 }
 
 @media (max-width: 700px) {
 	.logo {
 		display: none;
+	}
+	.logoLogin {
+		width: 350px;
 	}
 }

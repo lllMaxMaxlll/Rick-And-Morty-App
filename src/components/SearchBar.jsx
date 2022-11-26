@@ -21,7 +21,7 @@ const SearchBar = (props) => {
 			}>
 			<input
 				type='search'
-				placeholder='Agregar con número ID'
+				placeholder='Agregar número ID (1 al 826)'
 				className={styles.input}
 				onChange={handleChange}
 			/>

@@ -27,6 +27,8 @@ const App = () => {
 		if (username === userData.username && password === userData.password) {
 			setAccess(true);
 			navigate("/home");
+		} else {
+			window.alert("El usuario o la contraseña es incorrecta");
 		}
 	};
 
