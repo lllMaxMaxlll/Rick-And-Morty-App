@@ -26,12 +26,12 @@ const SearchBar = (props) => {
 				onChange={handleChange}
 			/>
 			<button
-				className={styles.button}
+				className={styles.buttonadd}
 				onClick={() => props.onSearch(text.text)}>
 				Agregar
 			</button>
 			<button
-				className={styles.button}
+				className={styles.buttonRandom}
 				onClick={() => props.onSearch(random)}>
 				Random
 			</button>

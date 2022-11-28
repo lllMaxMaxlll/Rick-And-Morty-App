@@ -49,6 +49,11 @@
 	outline: none;
 }
 
+.form input:focus {
+	border-color: rgba(0, 255, 0, 0.5);
+	box-shadow: 0px 5px 10px 10px rgba(33, 214, 33, 0.3);
+}
+
 .error {
 	position: absolute;
 	margin: 0 auto;
