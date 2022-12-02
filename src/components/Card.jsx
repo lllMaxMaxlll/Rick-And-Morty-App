@@ -1,5 +1,6 @@
 import styles from "./css-modules/Card.module.css";
 import { GrClose } from "react-icons/gr";
+import { MdOutlineFavoriteBorder, MdFavorite } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { addFav, deleteFav } from "../redux/actions";
 import { connect } from "react-redux";
@@ -30,13 +31,12 @@ export const Card = (props) => {
 	return (
 		<div className={styles.card}>
 			{isFav ? (
-				<button className={styles.addFav} onClick={handleFavorite}>
-					❤️
-				</button>
+				<MdFavorite className={styles.addFav} onClick={handleFavorite} />
 			) : (
-				<button className={styles.addFav} onClick={handleFavorite}>
-					🤍
-				</button>
+				<MdOutlineFavoriteBorder
+					className={styles.borderFav}
+					onClick={handleFavorite}
+				/>
 			)}
 			<img className={styles.cardImg} src={props.image} alt={props.name} />
 			<div className={styles.cardInfo}>

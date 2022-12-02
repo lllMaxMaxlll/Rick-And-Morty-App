@@ -3,7 +3,7 @@ import styles from "./Favorites.module.css";
 import { connect } from "react-redux";
 
 export const Favorites = (props) => {
-	const fav = props.myFavorites.map((elem) => (
+	const favCards = props.myFavorites.map((elem) => (
 		<Card
 			key={elem.id}
 			name={elem.name}
@@ -14,7 +14,7 @@ export const Favorites = (props) => {
 			status={elem.status}
 		/>
 	));
-	return <div className={styles.cards}>{fav}</div>;
+	return <div className={styles.cards}>{favCards}</div>;
 };
 
 const mapStateToProps = (state) => {

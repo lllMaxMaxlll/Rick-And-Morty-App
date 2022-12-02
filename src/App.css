@@ -1,12 +1,11 @@
 .App {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
 }
 
 .logo {
-	width: 450px;
+	width: 330px;
 }
 
 .logoLogin {

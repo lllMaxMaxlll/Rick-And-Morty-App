@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700&display=swap");
 
 body {
 	margin: 0;
+	height: 100%;
 	box-sizing: border-box;
 	font-family: "Titillium Web", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	background-color: #151515;
-	scroll-behavior: smooth;
-	background: url(./assets/wall.png);
+	background-image: url(./assets/wall.png);
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	-webkit-font-smoothing: antialiased;
 }
 
 .bodyBlack {

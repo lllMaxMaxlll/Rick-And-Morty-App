@@ -10,6 +10,7 @@ const Nav = (props) => {
 		<nav className={location.pathname === "/" ? styles.hidden : styles.nav}>
 			<NavLink to={"/home"} className={styles.svglogo}>
 				{logo}
+				<span>HOME</span>
 			</NavLink>
 			<SearchBar onSearch={props.onSearch} />
 			<div>

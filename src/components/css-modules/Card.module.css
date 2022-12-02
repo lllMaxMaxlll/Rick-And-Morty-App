@@ -93,10 +93,21 @@ a:-webkit-any-link {
 	left: 10px;
 	top: 10px;
 	z-index: 10;
-	background-color: transparent;
-	border: none;
+	transform: scale(1.7);
+	fill: rgb(184, 24, 24);
+	filter: drop-shadow(0px 4px 2px rgb(0 0 0 / 0.4));
+	cursor: pointer;
 }
 
+.borderFav {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 10;
+	transform: scale(1.7);
+	fill: rgb(255, 255, 255);
+	cursor: pointer;
+}
 .card:hover {
 	box-shadow: 1px 2px 10px rgba(35, 35, 35, 0.5);
 	transition: all 0.3s ease-in-out;

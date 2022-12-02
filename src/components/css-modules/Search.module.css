@@ -20,7 +20,9 @@
 	color: #0d0c22;
 	transition: 0.3s ease;
 }
-
+.input:focus {
+	box-shadow: 0px 5px 10px 10px rgba(28, 29, 28, 0.3);
+}
 .buttonadd {
 	font: inherit;
 	text-align: center;
