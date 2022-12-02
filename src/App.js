@@ -5,6 +5,7 @@ import About from "./components/About";
 import Detail from "./components/Detail";
 import PageNotFound from "./components/PageNotFound";
 import Form from "./components/Form";
+import Favorites from "./components/favorites/Favorites";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
@@ -81,6 +82,7 @@ const App = () => {
 				/>
 				<Route path='/detail/:id' element={<Detail />} />
 				<Route path='/about' element={<About />} />
+				<Route path='/favorites' element={<Favorites />} />
 				<Route path='*' element={<PageNotFound />} />
 			</Routes>
 		</div>

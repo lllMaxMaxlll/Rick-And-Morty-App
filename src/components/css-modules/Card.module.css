@@ -88,6 +88,15 @@ a:-webkit-any-link {
 	background-color: green;
 }
 
+.addFav {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 10;
+	background-color: transparent;
+	border: none;
+}
+
 .card:hover {
 	box-shadow: 1px 2px 10px rgba(35, 35, 35, 0.5);
 	transition: all 0.3s ease-in-out;

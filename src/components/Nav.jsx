@@ -23,6 +23,16 @@ const Nav = (props) => {
 						About
 					</button>
 				</NavLink>
+				<NavLink to={"/favorites"}>
+					<button
+						className={
+							location.pathname === "/favorites"
+								? styles.active
+								: styles.about
+						}>
+						Favorites
+					</button>
+				</NavLink>
 				<button onClick={() => props.logout()} className={styles.about}>
 					Logout
 				</button>
