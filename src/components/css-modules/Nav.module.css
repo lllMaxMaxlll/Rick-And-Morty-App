@@ -87,5 +87,6 @@
 @media (max-width: 700px) {
 	.nav {
 		flex-direction: column;
+		padding-bottom: 1rem;
 	}
 }
