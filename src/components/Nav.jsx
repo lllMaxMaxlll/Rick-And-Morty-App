@@ -7,7 +7,7 @@ import { NavLink, useLocation } from "react-router-dom";
 const Nav = (props) => {
 	const location = useLocation();
 	return (
-		<nav className={location.pathname === "/" ? styles.hidden : styles.nav}>
+		<nav className={styles.nav}>
 			<NavLink to={"/home"} className={styles.svglogo}>
 				{logo}
 				<span>HOME</span>

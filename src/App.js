@@ -68,7 +68,9 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			<Nav onSearch={onSearch} logout={logout} />
+			{useLocation().pathname !== "/" && (
+				<Nav onSearch={onSearch} logout={logout} />
+			)}
 			<img
 				src={Logo}
 				alt='imagen'
