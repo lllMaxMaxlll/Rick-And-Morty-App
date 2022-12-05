@@ -31,7 +31,11 @@
 }
 
 .about:hover {
-	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.about:active {
+	transform: translateY(-5px);
 }
 
 .svglogo {
@@ -39,7 +43,6 @@
 	left: 1.5rem;
 	margin-top: 5px;
 	fill: #f1faee;
-	filter: drop-shadow(-3px 3px 1px rgb(0 0 0 / 0.4));
 }
 
 .svglogo > span {
@@ -54,7 +57,7 @@
 
 .svglogo:hover {
 	fill: #ffffff;
-	filter: drop-shadow(-4px -2px 2px rgb(0 0 0 / 0.4));
+	filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.4));
 	transform: scale(1.04);
 	transition: all 0.3s ease-in-out;
 }
@@ -73,8 +76,8 @@
 	cursor: default;
 	font: inherit;
 	text-align: center;
-	padding: 0.3rem 1.2rem;
-	margin: 0.1rem 0.5rem;
+	padding: 0.2rem 1.1rem;
+	margin: 0 0.4rem;
 	text-transform: uppercase;
 	border-radius: 45px;
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);

@@ -21,7 +21,7 @@
 	transition: 0.3s ease;
 }
 .input:focus {
-	box-shadow: 0px 5px 10px 10px rgba(28, 29, 28, 0.3);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
 }
 .buttonadd {
 	font: inherit;
@@ -40,7 +40,11 @@
 }
 
 .buttonadd:hover {
-	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.buttonadd:active {
+	transform: translateY(-5px);
 }
 
 .buttonRandom {
@@ -60,7 +64,11 @@
 }
 
 .buttonRandom:hover {
-	box-shadow: 0px 15px 20px rgba(35, 35, 35, 0.4);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.buttonRandom:active {
+	transform: translateY(-5px);
 }
 
 @media screen and (max-width: 1000px) {
