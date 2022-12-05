@@ -1,7 +1,7 @@
 import styles from "./css-modules/Card.module.css";
 import { GrClose } from "react-icons/gr";
 import { MdOutlineFavoriteBorder, MdFavorite } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { addFav, deleteFav } from "../redux/actions";
 import { connect } from "react-redux";
 import React from "react";
@@ -48,11 +48,13 @@ export const Card = (props) => {
 					<h2>{props.gender}</h2>
 				</div>
 			</div>
-			<button
-				className={styles.button}
-				onClick={() => props.onClose(props.id)}>
-				<GrClose />
-			</button>
+			{useLocation().pathname !== "/favorites" && (
+				<button
+					className={styles.button}
+					onClick={() => props.onClose(props.id)}>
+					<GrClose />
+				</button>
+			)}
 		</div>
 	);
 };
