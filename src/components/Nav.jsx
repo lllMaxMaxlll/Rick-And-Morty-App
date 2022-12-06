@@ -12,8 +12,18 @@ const Nav = (props) => {
 				{logo}
 				<span>HOME</span>
 			</NavLink>
-			<SearchBar onSearch={props.onSearch} />
 			<div>
+				<SearchBar onSearch={props.onSearch} />
+				<NavLink to={"/home"}>
+					<button
+						className={
+							location.pathname === "/home"
+								? styles.active
+								: styles.about
+						}>
+						Home
+					</button>
+				</NavLink>
 				<NavLink to={"/about"}>
 					<button
 						className={
@@ -34,6 +44,7 @@ const Nav = (props) => {
 						Favorites
 					</button>
 				</NavLink>
+
 				<button onClick={() => props.logout()} className={styles.about}>
 					Logout
 				</button>

@@ -2,22 +2,16 @@
 	display: none;
 }
 
-.searchbar {
-	position: relative;
-	left: 80px;
-}
-
 .input {
 	font: inherit;
 	margin: 0 auto;
-	width: 15rem;
+	width: 17rem;
 	height: 2rem;
 	padding: 0 0.5rem;
 	border: 2px solid transparent;
 	border-radius: 45px;
 	outline: none;
 	background-color: #f3f3f4;
-	color: #0d0c22;
 	transition: 0.3s ease;
 }
 .input:focus {

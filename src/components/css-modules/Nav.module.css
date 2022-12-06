@@ -1,5 +1,6 @@
 .nav {
 	width: 100vw;
+	height: 4.5rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -12,6 +13,11 @@
 
 .nav > * {
 	margin: 0 0.3rem;
+}
+
+.nav > div {
+	display: flex;
+	align-items: center;
 }
 
 .about {
@@ -31,7 +37,7 @@
 }
 
 .about:hover {
-	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
 }
 
 .about:active {
@@ -71,7 +77,6 @@
 .active {
 	background-color: transparent;
 	color: #f1faee;
-	font-weight: 700;
 	border: #f1faee 2px solid;
 	cursor: default;
 	font: inherit;
