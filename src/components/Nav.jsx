@@ -11,42 +11,43 @@ const Nav = (props) => {
 			<NavLink to={"/home"} className={styles.svglogo}>
 				{logo}
 			</NavLink>
-			<div>
+			<div className={styles.buttons}>
 				<SearchBar onSearch={props.onSearch} />
-				<NavLink to={"/home"}>
-					<button
-						className={
-							location.pathname === "/home"
-								? styles.active
-								: styles.about
-						}>
-						Home
+				<div>
+					<NavLink to={"/home"}>
+						<button
+							className={
+								location.pathname === "/home"
+									? styles.active
+									: styles.button
+							}>
+							Home
+						</button>
+					</NavLink>
+					<NavLink to={"/about"}>
+						<button
+							className={
+								location.pathname === "/about"
+									? styles.active
+									: styles.button
+							}>
+							About
+						</button>
+					</NavLink>
+					<NavLink to={"/favorites"}>
+						<button
+							className={
+								location.pathname === "/favorites"
+									? styles.active
+									: styles.button
+							}>
+							Favorites
+						</button>
+					</NavLink>
+					<button onClick={() => props.logout()} className={styles.button}>
+						Logout
 					</button>
-				</NavLink>
-				<NavLink to={"/about"}>
-					<button
-						className={
-							location.pathname === "/about"
-								? styles.active
-								: styles.about
-						}>
-						About
-					</button>
-				</NavLink>
-				<NavLink to={"/favorites"}>
-					<button
-						className={
-							location.pathname === "/favorites"
-								? styles.active
-								: styles.about
-						}>
-						Favorites
-					</button>
-				</NavLink>
-
-				<button onClick={() => props.logout()} className={styles.about}>
-					Logout
-				</button>
+				</div>
 			</div>
 		</nav>
 	);

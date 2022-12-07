@@ -43,7 +43,6 @@
 	background-color: #f1faee;
 	border: none;
 	border-radius: 45px;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
 }
@@ -56,18 +55,31 @@
 	transform: translateY(-5px);
 }
 
-@media screen and (max-width: 1000px) {
-	.searchbar {
-		left: 0px;
+@media (max-width: 500px) {
+	.input {
+		width: 10rem;
+		margin-right: 0;
+		padding: 0 0.3rem;
+	}
+	.buttonadd {
+		background: #f1faee;
+		border: none;
+		padding: 0.3rem 0.5rem;
+		margin: 0.5rem;
+		border-radius: 45px;
 	}
 }
 
-@media screen and (max-width: 800px) {
-	.searchbar {
-		display: flex;
-		align-items: center;
-	}
+@media (max-width: 400px) {
 	.input {
-		width: 8rem;
+		width: 7rem;
+		font-size: small;
+		margin-right: 0;
+	}
+	.buttonRandom {
+		font-size: small;
+	}
+	.buttonadd {
+		font-size: 1.2rem;
 	}
 }
