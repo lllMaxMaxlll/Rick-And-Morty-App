@@ -14,17 +14,18 @@ const reducer = (state = initialState, { type, payload }) => {
 			};
 
 		case DELETE_FAV:
+			const deleteArray = [...state.myFavorites].filter(
+				(char) => char.id !== payload
+			);
 			return {
-				...state,
-				myFavorites: [...state.myFavorites].filter(
-					(char) => char.id !== payload
-				),
+				allCharacters: deleteArray,
+				myFavorites: deleteArray,
 			};
 
 		case FILTER:
 			const filtered =
 				payload === "All"
-					? [...state.allCharacters]
+					? state.allCharacters
 					: state.allCharacters.filter((char) => char.gender === payload);
 			return {
 				...state,
