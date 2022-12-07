@@ -33,7 +33,7 @@ const reducer = (state = initialState, { type, payload }) => {
 
 		case ORDER:
 			const sorted = [...state.allCharacters];
-			if (payload === "ascendente") {
+			if (payload === "ascendiente") {
 				sorted.sort((a, b) => a.id - b.id);
 			} else {
 				sorted.sort((a, b) => b.id - a.id);
