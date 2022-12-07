@@ -51,18 +51,7 @@
 	fill: #f1faee;
 }
 
-.svglogo > span {
-	font: inherit;
-	font-weight: 700;
-	font-size: 1.3rem;
-	position: relative;
-	left: -1rem;
-	top: -1rem;
-	color: transparent;
-}
-
 .svglogo:hover {
-	fill: #ffffff;
 	filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.63));
 	transform: scale(1.04);
 	transition: all 0.3s ease-in-out;

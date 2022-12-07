@@ -13,28 +13,19 @@
 	outline: none;
 	background-color: #f3f3f4;
 	transition: 0.3s ease;
+	margin-right: -2.2rem;
 }
 .input:focus {
 	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
 }
 .buttonadd {
-	font: inherit;
-	text-align: center;
-	padding: 0.3rem 1.2rem;
-	margin: 0.5rem;
-	font-weight: 400;
-	text-transform: uppercase;
-	color: #000;
-	background-color: #f1faee;
+	position: relative;
+	top: 3px;
+	background: none;
+	font-size: 1.3rem;
 	border: none;
-	border-radius: 45px;
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease 0s;
 	cursor: pointer;
-}
-
-.buttonadd:hover {
-	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
 }
 
 .buttonadd:active {
