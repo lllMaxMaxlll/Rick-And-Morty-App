@@ -10,7 +10,6 @@ const Nav = (props) => {
 		<nav className={styles.nav}>
 			<NavLink to={"/home"} className={styles.svglogo}>
 				{logo}
-				<span>HOME</span>
 			</NavLink>
 			<div>
 				<SearchBar onSearch={props.onSearch} />
