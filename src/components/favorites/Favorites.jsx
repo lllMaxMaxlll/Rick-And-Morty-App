@@ -27,13 +27,19 @@ export const Favorites = (props) => {
 	};
 
 	return (
-		<div>
-			<div>
-				<select name='order' onChange={handleOrder}>
+		<div className={styles.container}>
+			<div className={styles.selectors}>
+				<select
+					name='order'
+					onChange={handleOrder}
+					className={styles.select}>
 					<option value='ascendente'>Ascendente</option>
 					<option value='descendente'>Descendente</option>
 				</select>
-				<select name='gender' onChange={handleFilter}>
+				<select
+					name='gender'
+					onChange={handleFilter}
+					className={styles.select}>
 					<option value='All'>All</option>
 					<option value='Male'>Male</option>
 					<option value='Female'>Female</option>

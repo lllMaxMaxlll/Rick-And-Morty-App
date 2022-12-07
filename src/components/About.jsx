@@ -21,7 +21,7 @@ const About = () => {
 							<h2>Specie:</h2>
 							<span>Human</span>
 							<h2>Origin:</h2>
-							<span>Earth</span>
+							<span>Earth (Argentina Dimension)</span>
 						</div>
 						<div className={style.subtitle1}>
 							<h2>Status:</h2>

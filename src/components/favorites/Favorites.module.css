@@ -1,3 +1,46 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.select {
+	margin: 0 5px;
+	color: #000;
+	background-color: #f1faee;
+	border: none;
+	padding: 0.1rem 0.5rem;
+	margin: 0.1rem 0.5rem;
+	font-size: 1rem;
+	font: inherit;
+}
+
+.selectors:first-child::before {
+	content: "Order by ID";
+	color: #f1faee;
+	position: relative;
+	left: 0.1rem;
+	font-weight: 600;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.1rem 1rem;
+	border-radius: 45px;
+}
+
+.selectors:nth-child(1):after {
+	content: "Order by Gender";
+	color: #f1faee;
+	position: relative;
+	left: 0.1rem;
+	font-weight: 600;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0.1rem 1rem;
+	border-radius: 45px;
+}
+
+/* .select > option {
+	background-color: #f1faee;
+} */
+
 .cards {
 	width: 100%;
 	display: flex;
