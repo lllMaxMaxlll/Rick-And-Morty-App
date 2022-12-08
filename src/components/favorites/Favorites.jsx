@@ -33,7 +33,7 @@ export const Favorites = (props) => {
 					name='order'
 					onChange={handleOrder}
 					className={styles.select}>
-					<option value='ascendiente'>Ascendiente</option>
+					<option value='ascendente'>Ascendente</option>
 					<option value='descendente'>Descendiente</option>
 				</select>
 				<select

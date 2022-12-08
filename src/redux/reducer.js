@@ -23,7 +23,7 @@ const reducer = (state = initialState, { type, payload }) => {
 			};
 
 		case FILTER:
-			const filtered =
+			let filtered =
 				payload === "All"
 					? state.allCharacters
 					: state.allCharacters.filter((char) => char.gender === payload);
@@ -33,15 +33,15 @@ const reducer = (state = initialState, { type, payload }) => {
 			};
 
 		case ORDER:
-			const sorted = [...state.allCharacters];
-			if (payload === "ascendiente") {
-				sorted.sort((a, b) => a.id - b.id);
+			let order = [...state.myFavorites];
+			if (payload === "ascendente") {
+				order.sort((a, b) => a.id - b.id);
 			} else {
-				sorted.sort((a, b) => b.id - a.id);
+				order.sort((a, b) => b.id - a.id);
 			}
 			return {
 				...state,
-				myFavorites: sorted,
+				myFavorites: order,
 			};
 
 		default:
