@@ -46,10 +46,3 @@ const SearchBar = (props) => {
 };
 
 export default SearchBar;
-
-// key='name'
-// name='name'
-// placeholder='Escribe tu nombre...'
-// type='text'
-// value={inputs.name}
-// onChange={handleChange}
