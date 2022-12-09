@@ -8,7 +8,7 @@ const SearchBar = (props) => {
 	const [text, setText] = useState("");
 
 	const handleChange = (event) => {
-		setText({ ...text, text: event.target.value });
+		setText(event.target.value);
 	};
 
 	let location = useLocation();
@@ -21,6 +21,8 @@ const SearchBar = (props) => {
 				location.pathname === "/home" ? styles.searchbar : styles.hidden
 			}>
 			<input
+				value={text}
+				key='text'
 				type='text'
 				placeholder='Agregar número ID (1 al 826)'
 				className={styles.input}
@@ -28,7 +30,10 @@ const SearchBar = (props) => {
 			/>
 			<button
 				className={styles.buttonadd}
-				onClick={() => props.onSearch(text.text)}>
+				onClick={() => {
+					props.onSearch(text);
+					setText("");
+				}}>
 				<IoSearch />
 			</button>
 			<button
@@ -42,5 +47,9 @@ const SearchBar = (props) => {
 
 export default SearchBar;
 
-// import { IoSearch } from "react-icons/io";
-// IoSearch
+// key='name'
+// name='name'
+// placeholder='Escribe tu nombre...'
+// type='text'
+// value={inputs.name}
+// onChange={handleChange}
